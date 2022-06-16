@@ -25,7 +25,7 @@ A GKE cluster with a primary node pool. An existing subnet needs to be provided 
 ## Sub-packages
 
 - [gke-cluster](cluster)
-- [gke-nodepool](nodepools/primary)
+- [gke-nodepool](nodepool/primary)
 
 ## Resources
 

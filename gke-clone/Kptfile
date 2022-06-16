@@ -11,6 +11,7 @@ upstream:
     repo: https://github.com/rasadus03/raniamoh-blueprint.git
     directory: gke-clone
     ref: main
+  updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
@@ -22,9 +23,5 @@ info:
     A GKE cluster with a primary node pool. An existing subnet needs to be provided where the cluster should be created.
 pipeline:
   mutators:
-  - image: gcr.io/kpt-fn/apply-setters:v0.1
-    configPath: setters.yaml
-inventory:
-  namespace: default
-  name: inventory-22125298
-  inventoryID: 7ad21ddfd1a556521bf08a70bec79db8fcaa7589-1655377970808954000
+    - image: gcr.io/kpt-fn/apply-setters:v0.1
+      configPath: setters.yaml

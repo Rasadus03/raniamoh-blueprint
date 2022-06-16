@@ -9,5 +9,5 @@ info:
   description: A GKE node pool with a dedicated service account
 pipeline:
   mutators:
-  - image: gcr.io/kpt-fn/apply-setters:v0.1
-    configPath: setters.yaml
+    - image: gcr.io/kpt-fn/apply-setters:v0.1
+      configPath: setters.yaml
